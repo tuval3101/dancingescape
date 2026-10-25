@@ -1,4 +1,5 @@
 import { create } from 'zustand';
-import type { Track } from '../types/music';
-type Player = { current: Track | null; playing: boolean; progress: number; setCurrent: (track: Track) => void; toggle: () => void; setProgress: (progress: number) => void; };
-export const usePlayer = create<Player>((set) => ({ current: null, playing: false, progress: 0, setCurrent: (current) => set({ current, playing: true, progress: 0 }), toggle: () => set((s) => ({ playing: !s.playing })), setProgress: (progress) => set({ progress }) }));
+import { persist } from 'zustand/middleware';
+
+type PlayerState = { selectedId: string | null; playing: boolean; progress: number; volume: number; shuffle: boolean; repeat: boolean; select: (id: string, play?: boolean) => void; toggle: () => void; setPlaying: (playing: boolean) => void; setProgress: (progress: number) => void; setVolume: (volume: number) => void; setShuffle: () => void; setRepeat: () => void; reset: () => void; };
+export const usePlayer = create<PlayerState>()(persist((set) => ({ selectedId: null, playing: false, progress: 0, volume: 0.82, shuffle: false, repeat: false, select: (selectedId, play = true) => set({ selectedId, playing: play, progress: 0 }), toggle: () => set((state) => ({ playing: !state.playing })), setPlaying: (playing) => set({ playing }), setProgress: (progress) => set({ progress }), setVolume: (volume) => set({ volume }), setShuffle: () => set((state) => ({ shuffle: !state.shuffle })), setRepeat: () => set((state) => ({ repeat: !state.repeat })), reset: () => set({ selectedId: null, playing: false, progress: 0 }) }), { name: 'dancingescape-player', partialize: (state) => ({ selectedId: state.selectedId, volume: state.volume, shuffle: state.shuffle, repeat: state.repeat }) }));
