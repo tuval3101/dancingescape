@@ -1,0 +1,2 @@
+import type { Track } from '../types/music'; import { TrackGrid } from '../components/TrackGrid';
+export function Discover({ tracks }: { tracks: Track[] }) { return <main className="page"><p className="eyebrow">THE ARCHIVE</p><h1>Discover <em>new worlds.</em></h1><p className="lede">A growing collection of electronic stories from the edge of imagination.</p><div className="filter-row"><button className="filter active">All releases</button><button className="filter">Electronic</button><button className="filter">2026</button></div><TrackGrid tracks={tracks}/></main>; }

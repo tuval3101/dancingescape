@@ -1,0 +1,26 @@
+[
+  {
+    "id": "de-wereld-van-pieter-koolwijk-remix",
+    "title": "De Wereld van Pieter Koolwijk (Remix)",
+    "artist": "DancingEscape",
+    "duration": 182.4,
+    "audioUrl": "/music/de-wereld-van-pieter-koolwijk-remix/audio.mp3",
+    "coverUrl": "/music/de-wereld-van-pieter-koolwijk-remix/cover.webp",
+    "genre": "Fantasy Electronic",
+    "year": "2026",
+    "description": "A neon journey through floating kingdoms, open books, and impossible skies.",
+    "accent": "#8b5cff"
+  },
+  {
+    "id": "fantasie-alarm",
+    "title": "Fantasie Alarm!",
+    "artist": "DancingEscape",
+    "duration": 182.784,
+    "audioUrl": "/music/fantasie-alarm/audio.mp3",
+    "coverUrl": "/music/fantasie-alarm/cover.webp",
+    "genre": "Dreamwave",
+    "year": "2026",
+    "description": "Turn up the signal. A bright, euphoric alarm from a world that refuses to sleep.",
+    "accent": "#ff4fca"
+  }
+]

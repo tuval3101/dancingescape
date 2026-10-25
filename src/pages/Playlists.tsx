@@ -1,0 +1,1 @@
+export function Playlists() { return <main className="page"><p className="eyebrow">CURATED BY DANCINGESCAPE</p><h1>Your next <em>escape.</em></h1><div className="playlist-card"><span>✦</span><div><h2>Into the Unknown</h2><p>Every release, one continuous journey.</p></div><strong>02 tracks</strong></div></main>; }

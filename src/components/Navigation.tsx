@@ -1,0 +1,2 @@
+import { NavLink } from 'react-router-dom';
+export function Navigation() { return <header className="nav"><NavLink to="/" className="brand"><span className="brand-mark">✦</span><span>Dancing<span>Escape</span></span></NavLink><nav><NavLink to="/discover">Discover</NavLink><NavLink to="/playlists">Playlists</NavLink><NavLink to="/about">About</NavLink></nav><button className="profile">DE</button></header>; }

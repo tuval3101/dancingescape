@@ -1,0 +1,1 @@
+export function AudioVisualizer({ active = false }: { active?: boolean }) { return <div className={`visualizer ${active ? 'active' : ''}`}>{Array.from({ length: 28 }, (_, i) => <i key={i} style={{ '--i': i } as React.CSSProperties} />)}</div>; }
